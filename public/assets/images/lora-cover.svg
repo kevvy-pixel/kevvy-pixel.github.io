@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
+  <defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#102544"/><stop offset="1" stop-color="#215a84"/></linearGradient></defs>
+  <rect width="1200" height="675" fill="url(#g)"/><g fill="none" stroke="#88f1dc" stroke-width="8" stroke-linecap="round"><path d="M600 510V250"/><path d="M540 310c35-38 85-38 120 0"/><path d="M470 245c75-84 185-84 260 0"/><path d="M390 170c120-132 300-132 420 0"/></g><circle cx="600" cy="530" r="44" fill="#effffb"/><path d="M110 540c130-90 230-90 360 0s230 90 360 0 230-90 360 0" fill="none" stroke="#56c8ff" stroke-width="6" opacity=".55"/><text x="80" y="110" fill="#fff" font-size="48" font-family="Arial, sans-serif">LoRa ISAC Teaching System</text><text x="82" y="165" fill="#b9f9ed" font-size="27" font-family="Arial, sans-serif">MATLAB simulation · signal processing · low-cost experiments</text>
+</svg>
