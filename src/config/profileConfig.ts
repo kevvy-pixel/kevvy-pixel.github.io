@@ -28,6 +28,12 @@ export const profileConfig: ProfileConfig = {
 			showName: false,
 		},
 		{
+			name: "GitHub",
+			icon: "fa7-brands:github",
+			url: "https://github.com/kevvy-pixel",
+			showName: false,
+		},
+		{
 			name: "兰州大学",
 			icon: "material-symbols:school-outline",
 			url: "https://www.lzu.edu.cn/",

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">EviCausal multi-agent causal learning</title>
+  <desc id="desc">A stylized causal graph connecting research, code, and causal agents.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#071d35"/>
+      <stop offset="0.55" stop-color="#0b5260"/>
+      <stop offset="1" stop-color="#11856f"/>
+    </linearGradient>
+    <linearGradient id="agent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#f2fff9"/>
+      <stop offset="1" stop-color="#b7f5dd"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#001019" flood-opacity=".35"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10z" fill="#70f0c5"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="675" rx="34" fill="url(#background)"/>
+  <g opacity=".13" fill="#fff">
+    <circle cx="80" cy="90" r="180"/><circle cx="1120" cy="590" r="240"/>
+  </g>
+  <text x="70" y="98" fill="#fff" font-family="Arial, sans-serif" font-size="58" font-weight="700">EviCausal</text>
+  <text x="72" y="143" fill="#bdf7e5" font-family="Arial, sans-serif" font-size="26">Evidence-enhanced multi-agent causal structure learning</text>
+  <g stroke="#70f0c5" stroke-width="7" fill="none" marker-end="url(#arrow)" opacity=".95">
+    <path d="M302 354C390 286 446 276 510 318"/>
+    <path d="M690 318C770 276 826 286 900 354"/>
+    <path d="M900 435C820 510 748 520 684 475"/>
+    <path d="M516 475C444 520 370 510 302 435"/>
+  </g>
+  <g filter="url(#shadow)" font-family="Arial, sans-serif" text-anchor="middle">
+    <g>
+      <circle cx="230" cy="400" r="116" fill="url(#agent)" stroke="#ef9f5b" stroke-width="8"/>
+      <text x="230" y="389" fill="#103244" font-size="29" font-weight="700">Research</text>
+      <text x="230" y="426" fill="#37606b" font-size="22">clinical evidence</text>
+    </g>
+    <g>
+      <circle cx="600" cy="360" r="126" fill="url(#agent)" stroke="#55aee8" stroke-width="8"/>
+      <text x="600" y="349" fill="#103244" font-size="31" font-weight="700">Code</text>
+      <text x="600" y="389" fill="#37606b" font-size="22">computable variables</text>
+    </g>
+    <g>
+      <circle cx="970" cy="400" r="116" fill="url(#agent)" stroke="#72d38e" stroke-width="8"/>
+      <text x="970" y="389" fill="#103244" font-size="29" font-weight="700">Causal</text>
+      <text x="970" y="426" fill="#37606b" font-size="22">audited structure</text>
+    </g>
+  </g>
+  <g fill="#fff" font-family="Arial, sans-serif" text-anchor="middle">
+    <text x="600" y="580" font-size="25">Literature evidence  →  executable features  →  refined causal graph</text>
+    <text x="600" y="620" fill="#a9f3dc" font-size="21">Domain-generalizable medical AI · AAAI 2027 submission</text>
+  </g>
+</svg>

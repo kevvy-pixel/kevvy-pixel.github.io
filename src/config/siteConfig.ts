@@ -9,20 +9,22 @@ export const siteConfig: SiteConfig = {
 	title: "肖闫可唯｜科研主页",
 
 	// 站点副标题
-	subtitle: "Data Science · Intelligent Sensing · Optimization",
+	subtitle: "Causal AI · Intelligent Sensing · Data Science",
 
 	// 站点 URL
 	site_url: "https://kevvy-pixel.github.io",
 
 	// 站点描述
 	description:
-		"肖闫可唯的个人科研主页，聚焦数据科学、智能感知、自然语言处理与多目标优化。",
+		"肖闫可唯的个人科研主页，聚焦因果学习、医疗智能体、智能感知与数据科学。",
 
 	// 站点关键词
 	keywords: [
 		"肖闫可唯",
 		"兰州大学",
 		"数据科学",
+		"因果学习",
+		"医疗智能体",
 		"智能感知",
 		"自然语言处理",
 		"数学建模",
