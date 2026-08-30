@@ -14,7 +14,7 @@ comment: false
 
 电影评论情感分类既需要捕捉局部关键词，也需要理解跨句上下文。本研究使用 IMDb Reviews 公开数据集，设计 **CNN-BiGRU-Attention** 混合架构，在特征抽取效率与序列语义表达之间取得平衡。
 
-![训练与验证曲线](./images/sentiment-training.png)
+![CNN-BiGRU-Attention 情感分类器整体框架](./images/sentiment-model-architecture.png)
 
 ## 模型设计
 
@@ -23,6 +23,10 @@ comment: false
 - **Bidirectional GRU**：同时编码前向和后向上下文；
 - **Attention**：对影响情感极性的关键片段进行加权；
 - **正则化策略**：组合 Dropout、学习率衰减和 Early Stopping 控制过拟合。
+
+整体数据流从输入词序列出发，经卷积层提取局部模式、最大池化压缩冗余，再由双向 GRU 汇聚前后文信息。Attention 层对不同时间步的隐藏状态分配权重，最终通过全连接层和 Dropout 输出二分类结果。
+
+![训练与验证曲线](./images/sentiment-training.png)
 
 ## 实验迭代
 

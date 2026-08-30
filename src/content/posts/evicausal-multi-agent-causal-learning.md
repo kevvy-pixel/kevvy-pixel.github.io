@@ -5,7 +5,7 @@ pinned: true
 description: 面向跨域斜视诊断，将临床文献证据、可计算变量生成与因果结构审计整合到 Research、Code、Causal 三智能体协作框架中。
 tags: [Causal Discovery, Multi-Agent, Medical AI, Domain Generalization]
 category: 因果学习
-image: /assets/images/evicausal-cover.svg
+image: /assets/images/evicausal-overview.png
 author: 肖闫可唯
 comment: false
 ---
@@ -15,6 +15,8 @@ comment: false
 **AAAI 2027 投稿中 · 第三作者**
 
 EviCausal 面向真实医疗场景中的跨域斜视诊断问题。受采集设备、光照、背景、头部姿态和图像质量影响，在受控医院数据上训练的模型往往难以直接泛化到真实环境。项目尝试将医学文献证据、可解释变量构建和因果结构学习连接起来，减少对环境相关伪特征的依赖。
+
+![EviCausal 从数据、三智能体协作到跨环境评估的整体流程](./images/evicausal-overview.png)
 
 ## 三智能体协作
 
@@ -26,6 +28,18 @@ EviCausal 面向真实医疗场景中的跨域斜视诊断问题。受采集设�
 
 整个流程从文献研究延伸到源域训练、验证与独立目标域测试，同时严格隔离目标域结果，避免测试信息反向参与变量生成、因果发现或模型选择。
 
+### Research Agent：从文献到临床概念
+
+Research Agent 围绕疾病和测量目标检索文献，依次完成标题摘要筛选、临床测量概念提取、证据追踪与变量公式生成。每个候选变量都保留来源文献、语义分组和可操作化依据，使后续代码生成具有可审计的医学起点。
+
+![Research Agent 的文献筛选、临床概念提取与变量公式生成流程](./images/evicausal-research-agent.png)
+
+### Code Agent：从公式到候选特征
+
+Code Agent 将证据支持的变量公式映射为受限符号算子图，只允许调用已注册的眼部关键点、常量与数学运算节点。生成的程序经过执行器批量计算，将抽象临床概念转换为可用于因果发现和分类建模的候选特征。
+
+![Code Agent 将变量公式转化为可执行计算并生成候选特征](./images/evicausal-code-agent.png)
+
 ## 两个核心机制
 
 ### ERVD：证据驱动的变量发现
@@ -35,6 +49,10 @@ Evidence-Based Reasoning and Variable Discovery 从医学证据出发寻找可�
 ### ECDR：证据驱动的因果发现与修正
 
 Evidence-Based Causal Discovery and Refinement 先使用源域数据获得初始结构，再针对与诊断标签相关的因果边进行证据审计。每一次保留、删除或新增关系都保留变量语义、计算来源和文献依据，使最终结构不仅能训练，也能追溯其医学理由。
+
+Causal Agent 对数据驱动的初始图逐边检索临床证据，从合理性、方向一致性和支持证据三个维度决定保留、删除或新增关系，最后提取与诊断标签相关的 Markov Blanket 特征。
+
+![Causal Agent 的证据检索、因果关系审计与 Markov Blanket 提取流程](./images/evicausal-causal-agent.png)
 
 ## 跨域实验
 
@@ -53,4 +71,4 @@ Evidence-Based Causal Discovery and Refinement 先使用源域数据获得初始
 
 - [AutoCausalResearch](https://github.com/YifanWang-AI/AutoCausalResearch)（AAAI 双盲评审阶段为私有仓库，暂不对访客公开）
 
-为保护双盲评审与医疗数据隐私，本页不公开匿名稿 PDF、患者图像、原始数据和内部实验配置；待评审状态变化后再更新可公开材料。
+为保护双盲评审与医疗数据隐私，本页仅展示论文中的脱敏流程示意图，不公开匿名稿 PDF、原始患者影像、训练数据和内部实验配置；待评审状态变化后再更新可公开材料。
